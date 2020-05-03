@@ -25,16 +25,21 @@ init();
 
 function init() {
     board = [
-        [null, null, null], // column 0
+        [null, 1, null], // column 0
         [null, null, null], // column 1
-        [null, null, null], // column 2
+        [null, null, -1], // column 2
     ];
     turn = 1;
     winner = null;
     render();
 }
 function render() {
-
+    //render board
+    board.forEach(function(colArr, colIdx) {
+        colArr.forEach(function(cell, rowIdx) {
+            const div = document.getElementById(`c${colIdx}r${rowIdx}`)
+        });
+    }
 }
 
 function handleClick(evt) {

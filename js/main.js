@@ -15,8 +15,8 @@ let winner; // 1 = player 1 // -1 = player 2 //  T = tie  // null = no winner/ti
 
 
 /*----- event listeners -----*/
-//document.getElementById('squares')
-//    .addEventListener('click', handleClick);
+document.getElementById('board')
+    .addEventListener('click', handleClick);
 
 
 /*----- functions -----*/
@@ -34,5 +34,9 @@ function init() {
     render();
 }
 function render() {
-    
+
+}
+
+function handleClick() {
+    console.log(evt.target);
 }

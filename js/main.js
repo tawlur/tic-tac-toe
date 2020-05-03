@@ -11,7 +11,7 @@ let turn; // 1 or -1 player
 let winner; // 1 = player 1 // -1 = player 2 //  T = tie  // null = no winner/tie
 
 /*----- cached element references -----*/
-
+const markerEls = Array.from(document.querySelectorAll("#board > div"));
 
 
 /*----- event listeners -----*/
@@ -38,5 +38,8 @@ function render() {
 }
 
 function handleClick() {
-    console.log(evt.target);
+    const colIdx = markerEls.indexOf(evt.target);
+    // Call marker miss no click
+    if (colIdx === -1) return;
+    console.log(colIdx);
 }

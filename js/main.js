@@ -37,9 +37,10 @@ function render() {
 
 }
 
-function handleClick() {
+function handleClick(evt) {
     const colIdx = markerEls.indexOf(evt.target);
     // Call marker miss no click
     if (colIdx === -1) return;
     console.log(colIdx);
 }
+

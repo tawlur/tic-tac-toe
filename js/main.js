@@ -42,7 +42,7 @@ function render() {
     board.forEach(function(colArr, colIdx) {
         colArr.forEach(function(cell, rowIdx) {
             const div = document.getElementById(`c${colIdx}r${rowIdx}`)
-            div.style.backgroundColor = playerLookup [cell];
+                div.style.backgroundColor = playerLookup [cell];
         })
     })
     // render turn or winner message
@@ -60,10 +60,11 @@ function handleClick(evt) {
     // Click in the box ensure
     if (colIdx === -1) return;
     //get inex of null in col array
-    const rowIdx = board
+    const rowIdx = board    
 
     turn *= -1;
     // turn = turn times -1
     render();
-//console.log(colIdx);
+console.log(colIdx);
 }
+

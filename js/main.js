@@ -3,7 +3,7 @@
 const playerLookup = {
     '1': 'Player X',
     '-1': 'Player O',
-    'null': 'transparent'
+    'null': null
 };
 /*----- app's state (variables) -----*/
 let board;  //Array of column arrays with 1, -1, or null
@@ -26,11 +26,7 @@ document.getElementById('board')
 init();
 
 function init() {
-    board = [
-        [null, null, null], // column 0
-        [null, null, null], // column 1
-        [null, null, null], // column 2
-    ];
+    board = [null, null, null, null, null, null, null, null, null]
     turn = 1;
     winner = null;
     render();
@@ -39,11 +35,11 @@ function init() {
 // Transfer state to the dom
 function render() {
     //render board
-    board.forEach(function(colArr, colIdx) {
-        colArr.forEach(function(cell, rowIdx) {
-            const div = document.getElementById(`c${colIdx}r${rowIdx}`)
-                div.style.backgroundColor = playerLookup [cell];
-        })
+    board.forEach(function(cell, cellIdx) {
+     //   colArr.forEach(function(cell, rowIdx) {
+            const div = document.getElementById(`cell${cellIdx}`)
+                div.innerText = playerLookup [cell];
+       // })
     })
     // render turn or winner message
     if (winner) {
@@ -60,7 +56,8 @@ function handleClick(evt) {
     // Click in the box ensure
     if (colIdx === -1) return;
     //get inex of null in col array
-    const rowIdx = board    
+    board[colIdx] = turn;
+
 
     turn *= -1;
     // turn = turn times -1

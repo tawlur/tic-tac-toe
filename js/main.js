@@ -36,7 +36,6 @@ function init() {
 function render() {
     //render board
     board.forEach(function(cell, cellIdx) {
-     //   colArr.forEach(function(cell, rowIdx) {
             const div = document.getElementById(`cell${cellIdx}`)
                 div.innerText = playerLookup [cell];
        // })
@@ -53,8 +52,10 @@ function render() {
 function handleClick(evt) {
     // col index of  clicked marker
     const colIdx = markerEls.indexOf(evt.target);
+    console.log(evt);
+    console.log(evt.target.innerText);
     // Click in the box ensure
-    if (colIdx === -1) return;
+    if (evt.target.innerText) return;
     //get inex of null in col array
     board[colIdx] = turn;
 

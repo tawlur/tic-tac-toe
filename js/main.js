@@ -20,6 +20,8 @@ const msgEl = document.getElementById('msg');
 document.getElementById('board')
     .addEventListener('click', handleClick);
 
+document.querySelector(".restart").addEventListener('click', init);
+
 
 /*----- functions -----*/
 
@@ -65,4 +67,5 @@ function handleClick(evt) {
     render();
 console.log(colIdx);
 }
+
 

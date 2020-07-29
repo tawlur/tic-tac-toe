@@ -1,23 +1,22 @@
-
 body {
-    height: 75vh;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Roboto Mono', monospace;
+  height: 75vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto Mono", monospace;
 }
 
 #board {
-    display: grid;
-    grid-template-columns: repeat(3, 10vmin);
-    grid-template-rows: repeat(3, 10vmin);
-    gap: 3vmin;
-    margin-bottom: 1vmin;
+  display: grid;
+  grid-template-columns: repeat(3, 10vmin);
+  grid-template-rows: repeat(3, 10vmin);
+  gap: 3vmin;
+  margin-bottom: 1vmin;
 }
 
 #board div {
-    border-bottom: 50%;
-    border: 1px solid grey;
+  border-bottom: 50%;
+  border: 1px solid grey;
 }
